@@ -1,0 +1,14 @@
+[project]
+name = "stock-picker-data"
+version = "0.1.0"
+description = "Hourly stock data ingestion pipeline"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "pandas>=2.2.0",
+  "pyarrow>=16.0.0",
+  "yfinance>=0.2.61",
+]
+
+[tool.setuptools]
+py-modules = []
