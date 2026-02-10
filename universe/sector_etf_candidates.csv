@@ -1,0 +1,63 @@
+sector,ticker
+Communication Services,XLC
+Communication Services,VOX
+Communication Services,FCOM
+Communication Services,IYZ
+Communication Services,IXP
+Consumer Discretionary,XLY
+Consumer Discretionary,VCR
+Consumer Discretionary,FXD
+Consumer Discretionary,RTH
+Consumer Discretionary,FDIS
+Consumer Staples,XLP
+Consumer Staples,VDC
+Consumer Staples,FXG
+Consumer Staples,PSL
+Consumer Staples,FSTA
+Energy,XLE
+Energy,VDE
+Energy,IXC
+Energy,RYE
+Energy,FENY
+Financials,XLF
+Financials,VFH
+Financials,IXG
+Financials,IYF
+Financials,FNCL
+Health Care,XLV
+Health Care,VHT
+Health Care,IYH
+Health Care,IXJ
+Health Care,FHLC
+Industrials,XLI
+Industrials,VIS
+Industrials,IYJ
+Industrials,RGI
+Industrials,FIDU
+Information Technology,XLK
+Information Technology,VGT
+Information Technology,IYW
+Information Technology,FTEC
+Information Technology,IGM
+Materials,XLB
+Materials,VAW
+Materials,IYM
+Materials,RTM
+Materials,FMAT
+Real Estate,XLRE
+Real Estate,VNQ
+Real Estate,IYR
+Real Estate,RWR
+Real Estate,FREL
+Utilities,XLU
+Utilities,VPU
+Utilities,IDU
+Utilities,FUTY
+Utilities,RYU
+Foreign,VXUS
+Foreign,VEA
+Foreign,VWO
+Foreign,IEFA
+Foreign,IEMG
+Foreign,IXUS
+Foreign,VT

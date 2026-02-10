@@ -64,6 +64,12 @@ try {
         throw "update_universe.py failed with exit code $LASTEXITCODE"
     }
 
+    Write-Log "Building sector benchmarks (top ETFs/stocks per sector)..."
+    & $pythonPath "scripts/build_sector_benchmarks.py" 2>&1 | Tee-Object -FilePath $logPath -Append
+    if ($LASTEXITCODE -ne 0) {
+        throw "build_sector_benchmarks.py failed with exit code $LASTEXITCODE"
+    }
+
     Write-Log "Running hourly backfill from $StartDate..."
     & $pythonPath "scripts/backfill_hourly.py" "--start-date" $StartDate 2>&1 | Tee-Object -FilePath $logPath -Append
     if ($LASTEXITCODE -ne 0) {

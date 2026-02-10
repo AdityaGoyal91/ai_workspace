@@ -5,6 +5,7 @@ This repo now includes a minimal ingestion pipeline for hourly OHLCV data:
 - `scripts/backfill_hourly.py`: one-time historical load from `2024-01-01` onward.
 - `scripts/update_daily.py`: daily incremental refresh for freshest data.
 - `scripts/update_universe.py`: monthly universe refresh for top-volume stocks + largest ETFs.
+- `scripts/build_sector_benchmarks.py`: ranks top 5 ETFs and top 5 stocks per sector.
 
 ## 1) Create virtual environment
 
@@ -56,6 +57,24 @@ Audit outputs:
 - `local_data/audit/universe_stocks_ranked.csv`
 - `local_data/audit/universe_etfs_ranked.csv`
 
+## 2b) Build sector benchmarks
+
+```bash
+python scripts/build_sector_benchmarks.py
+```
+
+Inputs:
+
+- `universe/sectors.csv` (approved sector list + sector benchmark ETF)
+- `universe/sector_etf_candidates.csv`
+- `universe/stock_candidates.txt`
+
+Outputs:
+
+- `local_data/audit/sector_etf_top.csv`
+- `local_data/audit/sector_stock_top.csv`
+- `local_data/audit/sector_benchmark_summary.csv`
+
 ## 3) Run historical backfill (hourly)
 
 ```bash
@@ -102,6 +121,7 @@ Both scripts also write timestamped logs to `local_data/logs` by default (overri
 
 ## Notes
 
+- Strategy objective/config is defined in `config/strategy_config.json` (blended benchmark, target outperformance, one decision window per day).
 - Data source is Yahoo Finance via `yfinance`.
 - Some providers may limit how far intraday (`1h`) history goes. If that happens, the scripts will still run and store the maximum returned range.
 - If package install fails, check environment variables (`PIP_NO_INDEX`, `HTTP_PROXY`, `HTTPS_PROXY`, `ALL_PROXY`) in your shell.
