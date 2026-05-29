@@ -1,0 +1,33 @@
+# Claude local session data (contains memory, settings, credentials)
+.claude/
+
+# Generated output files
+*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Environment & secrets
+.env
+.env.*
+*.env
+secrets.json
+credentials.json
+config/local_*.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
